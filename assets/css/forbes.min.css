@@ -164,7 +164,7 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	}
 
 }
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .book{
 		position: static;
 		/* margin: auto; */
