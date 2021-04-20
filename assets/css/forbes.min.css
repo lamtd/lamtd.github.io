@@ -15,7 +15,7 @@ html {
 }
 body {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.428571429;
   color: #000;
   background-color: #f1f1f1;
@@ -24,7 +24,7 @@ p {
 	margin-top: 1em;
 }
 p.title{
-	font-size: 16px;
+	font-size: 30px;
 	font-weight: 600;
 
 }
@@ -273,10 +273,16 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 .text-white{
 	color: #FFF;
 }
+.bg-dark a{
+  color: #fff;
+}
 .background_white{
 	background: #FFF;
 	color: #000;
 	padding-top: 18px;
+}
+.background_white a{
+	color: #000 !important;
 }
 .background_gray{
 	background: #f1f1f1;
@@ -284,6 +290,10 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	padding-top: 18px;
 	padding-bottom: 4em;
 }
+.background_gray a{
+	color: #000 !important;
+}
+
 .background_gray hr{
 	background-color: #000;
 	width:300px;
