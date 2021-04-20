@@ -17,8 +17,8 @@ body {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #f1f1f1;
-  /* background-color: #f7f8fa; */
+  color: #000;
+  background-color: #f1f1f1;
 }
 p {
 	margin-top: 1em;
