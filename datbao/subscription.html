@@ -284,7 +284,7 @@
 						</div>
 						<div class="col-8">
 							<input type="number"
-								class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required" name="quantity"
+								class="form-control " name="quantity" id="quantity"
 								value="1" min="1">
 						</div>
 					</div>
@@ -413,6 +413,9 @@
 		$("select#type_package").change(function () {
 			set_total_amount();
 		});
+		$('#quantity').change(function () {
+			set_total_amount();
+		});
 		function call_back_after_change_city() {
 			var _city = $("select#city_id").children("option:selected").val();
 
@@ -432,6 +435,7 @@
 			//Tính tiền
 			var _city = $("select#city_id").children("option:selected").val();
 			var _package = parseInt($("select#type_package").children("option:selected").val());
+			var _quantity = parseInt($('#quantity').val());
 			console.log(_package);
 			var _total_amount = _package === 12 ? 618000 : 1128000;
 
@@ -441,6 +445,7 @@
 			if (parseInt(_city) === 1) {//Hà nội
 				_total_amount = _package === 12 ? 558000 : 1008000;
 			}
+			_total_amount *= _quantity;
 			// $("#total_amount").html(_total_amount);
 			const element = AutoNumeric.getAutoNumericElement('#total_amount');
   			element.set(_total_amount);
