@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="lam.truong@forbes.vn">
+	<meta name="copyright" content="The Forbes">
+	<title>Forbes Việt Nam - Đặt báo</title>
+	<meta name="description" content="Trang web đặt báo chính thức tạp chí Forbes Việt Nam">
+	<meta name="keywords" content="The Forbes Subscriptions">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/forbes.min.css">
+	<link href="/assets/plugins/fontawesome5.15.3/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/assets/plugins/form-validator/css/style.css">
+</head>
+
+<body>
+	<!-- fixed-top navbar-expand-md  -->
+	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="/"><img src="/assets/images/white_logo.png" height="32px"></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<ul class="navbar-nav mr-auto">
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Trang chủ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#section_subscribe">Đặt báo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/">Liên hệ</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid background_header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<picture>
+						<source srcset="/assets/images/main_header.png" type="image/webp">
+						<source srcset="/assets/images/main_header.png" type="image/png">
+						<img src="/assets/images/main_header.png" alt="Alt Text!" width="100%">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container">
+
+	</div> -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12">
+				<h3 class=" ">Điền thông tin của bạn</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<form class="needs-validation" method="POST" action="/save-subscription.php">
+			<div class="row">
+				<p style="margin:1em">
+					Thông tin chính:
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4"><label>Họ và tên</label></div>
+						<div class="col-8">
+							<input type="text" class="form-control is-invalid" name="customer_name" id="customer_name"
+								placeholder="Họ và tên" required="">
+							<!-- <div class="valid-feedback">Looks good!</div> -->
+							<div class="invalid-feedback">
+								Phải nhập thông tin
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4"><label>Ngày sinh</label></div>
+						<div class="col-8">
+							<div class="input-group date" data-provide="datepicker">
+								<input type="text" class="form-control" ignore-validation name="birthday">
+								<div class="input-group-addon">
+									<i class="fas fa-calendar-alt"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4"><label>Chức vụ</label></div>
+						<div class="col-8">
+							<select class="form-control" name="title" ignore-validation>
+								<option value="" selected="selected">--- Chức vụ ---</option>
+								<option value="Sinh viên">Sinh viên</option>
+								<option value="Tự kinh doanh">Tự kinh doanh</option>
+								<option value="Nhân viên/ Chuyên viên">Nhân viên/ Chuyên viên</option>
+								<option value="Quản lý cấp trung/ Giám sát">Quản lý cấp trung/ Giám sát</option>
+								<option value="Quản lý cấp cao/ Trưởng bộ phận">Quản lý cấp cao/ Trưởng bộ phận</option>
+								<option value="Giám đốc/ Chủ tịch">Giám đốc/ Chủ tịch</option>
+								<option value="Khác">Khác</option>
+							</select>
+							<div class="invalid-feedback">
+								Phải nhập thông tin
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4"><label>Ngành nghề</label></div>
+						<div class="col-8">
+							<select class="form-control" ignore-validation name="industry_id" required="">
+								<option value="">Không thiết lập</option>
+								<option value="1">Ngân hàng, bảo hiểm, chứng khoán, tài chính, quỹ đầu tư</option>
+								<option value="2">Sản xuất - tiêu dùng</option>
+								<option value="3">Vận tải, logistics</option>
+								<option value="4">Bất động sản, xây lắp, nội thất…</option>
+								<option value="5">Y tế</option>
+								<option value="6">Giáo dục</option>
+								<option value="7">Dịch vụ</option>
+								<option value="8">Dược phẩm</option>
+								<option value="9">Thực phẩm (F&amp;B)</option>
+								<option value="10">Bán lẻ, hàng tiêu dùng</option>
+								<option value="11">Nông nghiệp</option>
+								<option value="12">Đa ngành</option>
+								<option value="13">Công nghệ, Điên tử, Startup</option>
+								<option value="14">Truyền thông</option>
+								<option value="15">Văn phòng nước ngoài, NGO, lãnh sự..</option>
+								<option value="16">Khác</option>
+							</select>
+							<div class="invalid-feedback">
+								Phải nhập thông tin
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>
+								Công ty
+							</label>
+						</div>
+						<div class="col-8">
+							<input type="text" class="form-control" id="company" name="company" placeholder="Công ty"
+								required="">
+							<div class="invalid-feedback">
+								Phải nhập thông tin
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>
+								Điện thoại
+							</label>
+						</div>
+						<div class="col-8">
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="Điện thoại"
+								required="">
+							<div class="invalid-feedback">
+								Phải nhập thông tin
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row form-group">
+						<div class="col-2"><label>Email</label></div>
+						<div class="col-10">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email"
+								required="" type="email">
+							<div class="invalid-feedback">
+								Phải nhập thông tin
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<p style="margin:1em">
+					Địa chỉ giao báo:
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>Thành phố:</label>
+						</div>
+						<div class="col-8">
+							<select class="country form-control" id="city_id" name="city_id" required="">
+								<option value="">--- Thành phố ---</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>Quận, huyện</label>
+						</div>
+						<div class="col-8">
+							<select name="district_id" class="district form-control" id="district_id"></select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>Phường, xã</label>
+						</div>
+						<div class="col-8">
+							<select name="ward_id" class="ward form-control" id="ward_id" required></select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4"><label>Đường</label>
+						</div>
+						<div class="col-8">
+							<input type="text" class="form-control" name="street" id="street"
+								ng-model="subscription.street" placeholder="Đường *" required="">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label> Số nhà</label>
+						</div>
+						<div class="col-8">
+							<input type="text" class="form-control" name="street_number" id="street_number"
+								ng-model="subscription.street_number" placeholder="Tòa nhà, số nhà " required=""
+								aria-required="true" aria-invalid="true">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<p style="margin:1em">
+					Thông tin đặt báo:
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>Số lượng</label>
+						</div>
+						<div class="col-8">
+							<input type="number"
+								class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required" name="quantity"
+								value="1" min="1">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row form-group">
+						<div class="col-4">
+							<label>Gói đặt báo</label>
+						</div>
+						<div class="col-8">
+							<select class="form-control" required="" name="subs_number" id="type_package">
+								<option value="12">1 năm (12 kỳ báo)</option>
+								<option value="24">2 năm (24 kỳ báo)</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row form-group">
+						<div class="col-12"><label>Ghi chú khi giao báo (nếu có):</label></div>
+						<div class="col-12">
+							<textarea ignore-validation name="customer_note" class="form-control"></textarea>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+
+					<strong>
+						<p>Thông tin chuyển khoản:</p>
+						<ul>
+							<li>CÔNG TY CỔ PHẦN PHC MEDIA </li>
+							<li>Số TK: 1 0 1 9 3 4 4 7 6 2</li>
+							<li>Vietcombank - CN - TP. Hồ Chí Minh.</li>
+						</ul>
+						<p>GHI CHÚ: [Tên khách] - Dat bao ... năm</p>
+					</strong>
+				</div>
+			</div>
+			<div class="row" style="padding-bottom:2em">
+				<div class="col-sm-12">
+					<strong>Tổng đơn hàng: </strong><span id="total_amount"></span>
+				</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-md-6">
+					<center><input type="submit" id="btnSubmit" value="Đăng ký ngay" class="subscription_btn" />
+					</center>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<div class="container background_white" id="section_lienhe">
+		<div class="row">
+			<div class="col-sm-12 col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<p></p>
+						<p><strong>Phòng Chăm sóc Khách hàng và Phát hành</strong></p>
+						<p>Email: <a href="mailto:phathanh@forbes.vn">phathanh@forbes.vn</a></p>
+						<p>Hotline: 090 605 8687</p>
+
+						<div class="forbes_social_section">
+							<a href="https://www.facebook.com/forbesvietnam.official"><i
+									class="fab fa-facebook"></i></a>
+							<a href="https://www.linkedin.com/company/forbes-vietnam/about/"><i
+									class="fab fa-linkedin"></i></a>
+							<a href="https://www.youtube.com/channel/UCZFad_sGwAdtjyNW1MMDH3A"><i
+									class="fab fa-youtube-square"></i></a>
+							<a href="https://www.instagram.com/forbes.vn/"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+					<div class="col-4 contact_info_right_col">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="container-fluid background_gray" style="padding:6em 0em;">
+		<center>©2021 Forbes Vietnam (PHC Media JSC). All Rights Reserved.<br>
+			Deutsches Haus Ho Chi Minh City. 4th Floor, 33 Le Duan Blvd., District 1, Ho Chi Minh City, Viet Nam.
+		</center>
+	</div>
+
+	</div>
+	<script type='text/javascript' src="/assets/js/jquery-3.6.0.min.js"></script>
+	<!-- <script type='text/javascript' src="/assets/js/location-data.js"></script> -->
+	<script type='text/javascript' src="/assets/js/location-loader.js"></script>
+	<script type='text/javascript' src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src="/assets/plugins/form-validator/js/validator.js"></script>
+
+
+	<script type='text/javascript' src="/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script>
+		var IS_DIABLE_COD = false;
+		$('.datepicker').datepicker({
+			clearBtn: true,
+			format: "dd/mm/yyyy"
+		});
+
+	</script>
+	<script type="text/javascript" charset="utf-8">
+		var hcm_id_arr = [2, 65];
+		$(document).ready(function () {
+			var params = new URLSearchParams(document.location.search.substring(1));
+			var _package = params.get("package");
+
+			$("#type_package").val(_package);
+		});
+		$("select#city_id").change(function () {
+			call_back_after_change_city();
+			_load_district_to_select();
+		});
+		$("select#district_id").change(function () {
+			_load_ward_to_select();
+		});
+		$("select#type_package").change(function () {
+			set_total_amount();
+		});
+		function call_back_after_change_city() {
+			var _city = $("select#city_id").children("option:selected").val();
+
+			if ((_city === 1 && hcm_id_arr.includes(parseInt(_city))) || IS_DIABLE_COD) {
+				if ($('#rdb_cod').val() == 2) {
+					$('#rdb_cod').prop('checked', false);
+				}
+				$("#area_cash_on_delivery").hide();
+
+			} else {
+				$("#area_cash_on_delivery").show();
+			}
+			set_total_amount();
+
+		}
+		function set_total_amount() {
+			//Tính tiền
+			var _city = $("select#city_id").children("option:selected").val();
+			var _package = parseInt($("select#type_package").val());
+			
+			var _total_amount = _package === 1 ? 618000 : 1128000;
+
+			if (hcm_id_arr.includes(parseInt(_city))) {
+				_total_amount = _package === 1 ? 486000 : 864000;
+			}
+			if (parseInt(_city) === 1) {//Hà nội
+				_total_amount = _package === 1 ? 558000 : 1008000;
+			}
+			$("#total_amount").html(_total_amount);
+		}
+	</script>
+	
+</body>
+
+</html>

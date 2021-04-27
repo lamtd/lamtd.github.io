@@ -1,0 +1,33 @@
+#Force non-www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} www\.datbao\.forbes\.vn [NC]
+RewriteCond %{HTTP_HOST} datbao\.forbes\.vn [NC]
+RewriteRule ^(.*)$ http://datbao.forbes.vn/$1 [L,R=301]
+# Forcing HTTPS
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{SERVER_PORT} 80
+# Pages to Apply
+RewriteRule ^(.*)$ https://datbao.forbes.vn/$1 [R=301,L]
+
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=3600, public"
+</filesMatch>
+
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+RewriteRule ^(.*) - [E=BASE:%1]
+
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^index\.html(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .? - [L]
+
+RewriteRule .? %{ENV:BASE}/index.html [L]
+
+<FilesMatch ".sql|.tar.gz|.env">
+    Order Allow,Deny
+    Deny from All
+</FilesMatch>
+Options -Indexes
+RewriteCond %{HTTP_HOST} ^www\.subscription\.forbes\.vn$
+RewriteRule ^$ "https\:\/\/datbao\.forbes\.vn\/" [R=301,L]
