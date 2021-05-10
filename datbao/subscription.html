@@ -306,6 +306,18 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="row form-group">
+						<div class="col-12"><label>Kì báo bạn muốn nhận:</label></div>
+						<div class="col-12">
+							<select class="form-control" required="" name="from_issue" id="from_issue">
+
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row form-group">
 						<div class="col-12"><label>Ghi chú khi giao báo (nếu có):</label></div>
 						<div class="col-12">
 							<textarea ignore-validation name="subscriber_note" class="form-control"></textarea>
@@ -435,7 +447,6 @@
 			var _city = $("select#city_id").children("option:selected").val();
 			var _package = parseInt($("select#type_package").children("option:selected").val());
 			var _quantity = parseInt($('#quantity').val());
-			console.log(_package);
 			var _total_amount = _package === 12 ? 618000 : 1128000;
 
 			if (hcm_id_arr.includes(parseInt(_city))) {
@@ -449,6 +460,16 @@
 			const element = AutoNumeric.getAutoNumericElement('#total_amount');
   			element.set(_total_amount);
 		}
+		load_issues_package();
+
+		function load_issues_package(){
+		$.getJSON( "https://public.forbes.vn/api/distribution/issues/get_current_and_next_issues", function( data ) {
+			$.each( data, function( key, val ) {
+				$("select#from_issue").append($('<option value="' + val['issue_id'] + '">' + val['name'] +  '</option>'));
+				});
+			});
+		}
+
 	</script>
 	
 </body>
