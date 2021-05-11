@@ -151,7 +151,7 @@
 		load_tickets_of_event();
 
 		function load_tickets_of_event(){
-		$.getJSON( "http://localhost:8080/api/event/ticket/get_tickets_of_event?event_id=30&get_public=true", function( data ) {
+		$.getJSON( "https://public.forbes.vn/api/event/ticket/get_tickets_of_event?event_id=30&get_public=true", function( data ) {
 				if (data.event != null){
 					$('#event_name').html(data.event.event_name);
 				}
