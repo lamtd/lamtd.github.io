@@ -115,8 +115,12 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 .book{
 	position: absolute;
 	right: 0;
-	top:12em;
+	top: 24em;
 	display: block;
+}
+.section_desription{
+	display: block; 
+	max-width: 68%;
 }
 @media (max-width: 768px) {
 
@@ -127,6 +131,10 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	{
 		height: 160px;
 		top: -7em;
+	}
+	.section_desription{
+		display: block; 
+		max-width: 100%;
 	}
 
 	.row_top_image{
