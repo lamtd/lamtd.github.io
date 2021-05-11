@@ -1,0 +1,8 @@
+node_modules
+bin
+.tmp
+*.iml
+.zedstate
+tags
+dist
+build
