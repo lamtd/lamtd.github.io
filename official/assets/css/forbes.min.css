@@ -125,9 +125,9 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 .myButton {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	background-color:#ff0000;
+	background-color:#e7353c;
 	border-radius:28px;
-	border:1px solid #ff0000;
+	border:1px solid #e7353c;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
