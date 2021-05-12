@@ -117,6 +117,9 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	 !important;
 	/* background-color : aqua; */
 }
+.subscribe_btn{
+	text-align: left;
+}
 .myButton:hover{
 	color: #FFF;
 	background-color : #000 !important;
@@ -193,6 +196,10 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	.forbes_price_table{
 		border: 2px solid #000;
 	}
+	.subscribe_btn
+	{
+		text-align: center;
+	}
 
 
 	.mobile_break_line{
@@ -206,7 +213,13 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	}
 
 }
-@media (max-width: 1025px) {
+@media (max-width: 1400px) {
+
+	  .section_desription{
+		  max-width: 60%;
+	  }
+  }
+@media (max-width: 1201px) {
   .book{
 		position: static;
 		/* margin: auto; */
@@ -216,6 +229,9 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	.book img{
 		display: block;
 		margin: 0 auto;
+	}
+	.section_desription{
+		max-width: 100%;
 	}
 }
 
