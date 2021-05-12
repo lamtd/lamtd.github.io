@@ -28,6 +28,10 @@ p.title{
 	font-weight: 600;
 
 }
+.highlight_in_text{
+	font-weight: bold;
+	font-size:xx-large;
+}
 .bg-dark{
 	background-color: #000 !important;
 }
