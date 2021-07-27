@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="lam.truong@forbes.vn">
 	<meta name="copyright" content="The Forbes">
-	<title>Forbes Việt Nam - Đặt báo</title>
-	<meta name="description" content="Trang web đặt báo chính thức tạp chí Forbes Việt Nam">
+	<title>Đặt báo dài hạn - Tạp chí Forbes Việt Nam</title>
+	<meta name="description" content="Đặt và thưởng thức tạp chí yêu thích của bạn ngay tại nhà. Đón đọc các ý tưởng, cách vận hành doanh nghiệp hiệu quả từ những doanh nhân nổi tiếng">
 	<meta name="keywords" content="The Forbes Subscriptions">
 
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
@@ -18,9 +18,35 @@
 	<link href="assets/plugins/fontawesome5.15.3/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css">
 	<link rel="stylesheet" href="assets/plugins/form-validator/css/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HPCPRJWER"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-5HPCPRJWER');
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-5J8KJR2');</script>
+	<!-- End Google Tag Manager -->
+
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5J8KJR2" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<!-- fixed-top navbar-expand-md  -->
 	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
 		<div class="container">
@@ -72,6 +98,7 @@
 		</div>
 	</div>
 	<div class="container">
+		
 		<form class="needs-validation" method="POST" action="https://public.forbes.vn/api/subscriber">
 			<div class="row">
 				<p style="margin:1em">
@@ -218,7 +245,7 @@
 						</div>
 						<div class="col-8">
 							<select class="country form-control" id="city_id" name="city_id" required="">
-								
+
 							</select>
 						</div>
 					</div>
@@ -283,9 +310,7 @@
 							<label>Số lượng</label>
 						</div>
 						<div class="col-8">
-							<input type="number"
-								class="form-control " name="quantity" id="quantity"
-								value="1" min="1">
+							<input type="number" class="form-control " name="quantity" id="quantity" value="1" min="1">
 						</div>
 					</div>
 				</div>
@@ -298,18 +323,6 @@
 							<select class="form-control" required="" name="subs_number" id="type_package">
 								<option value="12">1 năm (12 kỳ báo)</option>
 								<option value="24">2 năm (24 kỳ báo)</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="row form-group">
-						<div class="col-12"><label>Kỳ báo bắt đầu nhận:</label></div>
-						<div class="col-12">
-							<select class="form-control" required="" name="from_issue" id="from_issue">
-
 							</select>
 						</div>
 					</div>
@@ -458,20 +471,12 @@
 			_total_amount *= _quantity;
 			// $("#total_amount").html(_total_amount);
 			const element = AutoNumeric.getAutoNumericElement('#total_amount');
-  			element.set(_total_amount);
+			element.set(_total_amount);
 		}
-		load_issues_package();
 
-		function load_issues_package(){
-		$.getJSON( "https://public.forbes.vn/api/distribution/issues/get_current_and_next_issues", function( data ) {
-			$.each( data, function( key, val ) {
-				$("select#from_issue").append($('<option value="' + val['issue_id'] + '">' + val['name'] +  '</option>'));
-				});
-			});
-		}
 
 	</script>
-	
+
 </body>
 
 </html>
