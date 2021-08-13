@@ -174,8 +174,12 @@ img.right-arrow{
 	margin-bottom: 0px;
 }
 .three-column-events p.title-sub{
-	margin-bottom: 26px;
+	
 	font-style: italic;
+}
+.three-column-events a.title-event-section{
+	margin-bottom: 26px;
+	display: block;
 }
 
 .three-column-events a{
@@ -324,6 +328,10 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 		padding-right: 20px;
 		padding-left: 0px;
 		max-width: 33%;
+		
+	}
+	.three-column-events .ecol-2 img{
+		margin-bottom: 6px;;
 	}
 	.three-column-events .ecol-3{
 		padding-left: 20px;

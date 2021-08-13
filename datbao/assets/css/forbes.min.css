@@ -115,6 +115,12 @@ h1.center-header  {
 	text-align: center;
 	/* transform: translate(30, -50%); */
   }
+ 
+
+  .description{
+	font-family: 'Playfair Display', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+  }
+
 .register-button{
 	position : relative;
 	top: 50%;
@@ -134,7 +140,7 @@ a.btn-datbao{
 	-webkit-text-size-adjust:none;
 }
 h1.center-header i{
-	font-size: 50px;
+	font-size: 60px;
 }
 h2
 {
@@ -191,7 +197,7 @@ h4
 	width: 80px;
 }
 .subscriber-package h2{
-	font-size: 28px;
+	font-size: 25px;
 	font-weight: 600;
 	color: #c0c0c0;
 	margin: 30px;
