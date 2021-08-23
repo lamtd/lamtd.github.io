@@ -371,6 +371,9 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 		font-size: 35px;
 		line-height: 50px;
 	}
+	h1.center-header i{
+		font-size: 35px;
+	}
 	footer, .footer{
 		padding: 15px;
 	}
@@ -389,6 +392,13 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	.three-column-events .ecol-3{
 		width: 100%;
 		margin-bottom: 4em;
+	}
+	.background_white{
+		padding: 1em;
+	}
+	.row{
+		margin-right: 0px;
+    	margin-left: 0px;
 	}
 
 }
@@ -415,17 +425,26 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 	.three-column-events .event-description{
 		min-height: 300px;
 	}
-	
+	.br-on-mobile {
+		display: none;
+	}
 }
 @media (min-width: 992px) {
 	
 
 }
-@media screen and (min-width: 480px)
+
+@media (max-width: 480px)
 {
-  .br-on-mobile {
-      display: none;
-  }
+	.subscriber-package
+	{
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+  
 }
 @media (min-width: 1280px) {
 
