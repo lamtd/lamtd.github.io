@@ -96,7 +96,8 @@ header .container{
 	-o-background-size: cover;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
-	/* width: 100%; */
+	padding-right: 0px;
+    padding-left: 0px;
 	height: 460px;
 	/* margin: auto; */
 	text-align: center;
@@ -614,4 +615,15 @@ select.form-control.is-valid, select.was-validated .form-control:valid
 
 .forbes_sale_noti{
 	margin-bottom: 2em;
+}
+
+.middle-red-line{
+    background: rgba(0, 0, 0, 0.685);
+    overflow: hidden;
+    /* height: 200px; */
+	height: 100%;
+    z-index: 2;
+	/* display: block; */
+	text-align: center;
+
 }

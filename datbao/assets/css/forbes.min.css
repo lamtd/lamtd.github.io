@@ -95,7 +95,8 @@ header .container{
 	-webkit-background-size: cover;
 	 /* Full height */
 	height: 100%;
-
+	padding-right: 0px;
+    padding-left: 0px;
 	/* Center and scale the image nicely */
 	background-position: center;
 	background-repeat: no-repeat;
