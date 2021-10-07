@@ -625,5 +625,8 @@ select.form-control.is-valid, select.was-validated .form-control:valid
     z-index: 2;
 	/* display: block; */
 	text-align: center;
-
+}
+li.sub-1{
+	margin-left: 2em;
+	list-style: none;
 }
