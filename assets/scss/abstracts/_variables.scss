@@ -1,0 +1,92 @@
+//1.FONT
+@import url(https://fonts.bunny.net/css?family=noto-sans:400,500,700,800);
+$font-text: 'Noto Sans', sans-serif;
+$font-heading: 'Noto Sans', sans-serif;
+$font-3xs: 10px;
+$font-xxs: 12px;
+$font-xs: 13px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-md-2: 15px;
+$font-lg: 18px;
+$font-xl: 20px;
+$font-2xl: 22px;
+$font-3xl: 58px;
+//2.COLOR
+// New Ecom
+$color-black: #000000;
+$color-brand-1: #0EA5EA;
+$color-brand-2: #1CC2E7;
+$color-brand-3: #0EA5EA;
+$color-border-1: #D5DFE4;
+$color-gray-50: #E6F0FF;
+$color-gray-100: #D8E6FB;
+$color-gray-200: #C9DAF5;
+$color-gray-300: #B8CDEB;
+$color-gray-400: #A7BDDD;
+$color-gray-500: #94A9C9;
+$color-gray-600: #7F92B0;
+$color-gray-700: #66768F;
+$color-gray-800: #222F43;
+$color-gray-850: #131C31;
+$color-gray-900: #0F172A;
+$color-gray-950: #0B1222;
+$color-gray-950-day: #F9FBFF;
+$color-gray-900-day: #F9FBFF;
+$color-gray-850-day: #E8EDF5;
+$color-gray-800-day: #C8D5E8;
+$color-gray-700-day: #4E658A;
+$color-gray-600-day: #7E9CC7;
+$color-gray-500-day: #2E548C;
+$color-gray-400-day: #94A9C9;
+$color-gray-300-day: #7F92B0;
+$color-gray-200-day: #66768F;
+$color-gray-100-day: #4A576A;
+$color-gray-50-day: #344161;
+$color-primary: #1AAEED;
+$color-secondary: #8D99AE;
+$color-success: #6CFFC1;
+$color-danger: #FF756C;
+$color-warning: #FFB067;
+$color-info: #27B3D2;
+$color-white: #ffffff;
+$color-green: #00FF8A;
+$color-yellow: #FFF500;
+$color-pink: #FF6BC4;
+$color-blue: #3AA1FF;
+$color-linear: rgba(14, 165, 234, 1);
+$color-gray: #667085;
+// End New
+//3.Boxshadow
+$box-shadow-1: rgba(11,209,209,0.2) 0px 3px 20px;
+$box-shadow-7: rgba(11,209,209,0.3) 0px 3px 20px;
+
+$box-shadow-2: 0px 45px 80px rgba(0, 0, 0, 0.04);
+$box-shadow-3: 0px 47px 65px rgba(21, 28, 38, 0.1);
+$box-shadow-4: 4px 6px 23px rgba(228, 92, 35, 0.1);
+$box-shadow-5: 4px 4px 40px rgba(16, 24, 40, 0.1);
+$box-shadow-inner: inset 0px 40px 80px #FCFCFC;
+$box-shadow-6: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+//5. Background
+// New
+$background-white: #ffffff;
+$background-linear: linear-gradient(90deg, rgba(14,165,234,1), rgba(11,209,209,1) 51%, rgba(14,165,234,1)) var(--x, 0)/ 200%;
+$background-linear-2: linear-gradient(90deg, rgba(11,209,209,1) 0%, rgba(14,165,234,1) 100%);
+// End new
+// 6. text-shadow
+$text-shadow: 0px 4px 4px rgba(0,
+0,
+0,
+0.25);
+// 7. breakpoints
+$grid-breakpoints: ( xs: 0,
+xxsm: 350px,
+xssm: 450px,
+xsm: 500px,
+sm: 576px,
+smd: 650px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1400px);

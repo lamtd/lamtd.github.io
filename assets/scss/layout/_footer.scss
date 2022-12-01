@@ -1,0 +1,149 @@
+.footer {
+    // New Agon
+    .icon-socials {
+        display: inline-block;
+        padding-left: 28px;
+        height: 32px;
+        width: auto;
+        transition-duration: 0.2s;
+        &:hover {
+            transform: translateY(-3px);
+            transition-duration: 0.2s;
+            color: $color-linear !important;
+        }
+        &.icon-twitter {
+            background: url(../imgs/template/icons/tw.svg) no-repeat 0px 0px;
+            transition-duration: 0.2s;
+            &:hover {
+                background: url(../imgs/template/icons/tw-hover.svg) no-repeat 0px 0px;
+                transition-duration: 0.2s;
+            }
+        }
+        &.icon-insta {
+            background: url(../imgs/template/icons/insta.svg) no-repeat 0px 0px;
+            transition-duration: 0.2s;
+            &:hover {
+                background: url(../imgs/template/icons/insta-hover.svg) no-repeat 0px 0px;
+                transition-duration: 0.2s;
+            }
+        }
+        &.icon-linked {
+            background: url(../imgs/template/icons/linked.svg) no-repeat 0px 0px;
+            transition-duration: 0.2s;
+            &:hover {
+                background: url(../imgs/template/icons/linked-hover.svg) no-repeat 0px 0px;
+                transition-duration: 0.2s;
+            }
+        }
+    }
+
+    .menu-footer {
+        display: inline-block;
+        li {
+            list-style: none;
+            margin-bottom: 12px;
+            a {
+                font-size: $font-md;
+                line-height: 24px;
+                text-decoration: none;
+                display: block;
+                padding: 0px 0px 0px 0px;
+                transition-duration: 0.2s;
+                &:hover {
+                    color: $color-brand-1 !important;
+                    transition-duration: 0.2s;
+                    padding-left: 3px;
+                }
+            }
+        }
+    }
+    .theme-day {
+        .menu-footer {
+            li {
+                a {
+                    color: $color-gray-500-day;
+                    &:hover {
+                        color: $color-brand-1;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        border-top-width: 1px;
+        border-top-style: solid;
+        padding: 50px 0px 0px 0px;
+        font-size: $font-sm;
+        a {
+            text-decoration: none;
+        }
+    }
+    // End new Agon
+}
+#scrollUp {
+	width: 54px;
+    height: 54px;
+    color: $color-white;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 999 !important;
+    border: 0;
+    // background-color: #fff;
+    background: url(../imgs/template/bg-top.png) no-repeat;
+    transition-duration: 0.2s;
+    // background-color: $color-gray-900;
+    i {
+        display: block;
+        line-height: 59px !important;
+        font-size: 20px;
+        color: #fff;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        transition-duration: 0.2s;
+    }
+}
+.menu-bottom
+{
+    li
+    {
+        display: inline-block;
+        a
+        {
+            display: block;
+            padding:0px 15px;
+        }
+        &:last-child
+        {
+            a
+            {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+.footer-1
+{
+    margin: 50px 0px 24px 0px;
+    padding: 89px 128px 50px 128px;
+    border-radius: 48px;
+    border-width: 1px;
+    border-style: solid;
+}
+.progressCounter {
+    z-index: 12345;
+    cursor: pointer;
+    span.progressScroll-text {
+        font-size: 20px;
+        color: #fff;
+    }
+}
+.copyright {
+    color: $color-brand-2;
+    &:hover {
+        color: $color-brand-1;
+    }
+}

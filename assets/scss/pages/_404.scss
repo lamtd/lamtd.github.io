@@ -1,0 +1,30 @@
+.box-404 {
+    max-width: 900px;
+    margin: auto;
+    .image-404 {
+        max-width: 384px;
+        margin-right: 40px;
+    }
+    .info-404 {
+        width: 100%;
+    }
+}
+.shadow-page-404 {
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        background: url(../imgs/page/404/shadow-1.svg) no-repeat bottom 100% right 0px;
+        z-index: -1;
+    }
+}
+.footer {
+    position: relative;
+    z-index: 2;
+}

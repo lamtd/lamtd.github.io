@@ -1,0 +1,218 @@
+.card-style-1 {
+    position: relative;
+    width: 100%;
+    &:hover {
+        h6 {
+            color: $color-brand-2 !important;
+        }
+        .card-image {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .card-image {
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .link-post {
+            &:hover {
+                h4 {
+                    color: $color-brand-2 !important;
+                }
+            }
+        }
+        .card-info {
+            position: absolute;
+            bottom: 0px;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            background: url(../imgs/page/homepage1/bg-trans.png) repeat-x left bottom;
+            &.card-bg-2 {
+                background: url(../imgs/page/homepage3/bg-trans.png) repeat-x left bottom;
+            }
+            .info-bottom {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                padding: 15px;
+            }
+            .box-author {
+                img {
+                    width: 32px !important;
+                    height: 32px !important;
+                    border-radius: 50%;
+                }
+                .author-info {
+                    display: flex;
+                    align-items: center;
+                    h6 {
+                        line-height: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.card-blog-1 {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 30px;
+    border: 1px solid $color-gray-800;
+    background-color: $color-gray-850;
+    .card-image {
+        position: relative;
+        img {
+            border-radius: 16px;
+            width: 100%;
+        }
+    }
+    .card-info {
+        a {
+            &:hover {
+                color: $color-brand-1 !important;
+                h4, h5 {
+                    color: $color-brand-1 !important;
+                }
+            }
+        }
+    }
+    &:hover {
+        h4.color-white {
+            color: $color-brand-2 !important;
+        }
+    }
+}
+.card-blog-2 {
+    padding: 0px;
+    .card-image {
+        img {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+    .card-info {
+        padding: 0px 20px 20px 20px;
+    }
+}
+.card-style-2 {
+    border-width: 1px;
+    border-style: solid;
+    padding: 19px;
+    position: relative;
+    display: flex;
+    border-radius: 16px;
+    align-items: center;
+    margin-bottom: 30px;
+    .card-image {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+        min-width: 32px;
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+    }
+    .card-info {
+        a {
+            &:hover {
+                color: $color-brand-2;
+            }
+        }
+    }
+}
+.card-list-posts {
+    display: flex;
+    width: 100%;
+    margin-bottom: 60px;
+    &:hover {
+        h5.color-white {
+            color: $color-brand-2 !important;
+        }
+    }
+    .card-image {
+        width: 270px;
+        min-width: 270px;
+        margin-right: 20px;
+        img {
+            width: 100%;
+            border-radius: 16px;
+        }
+    }
+    .card-info {
+        width: 100%;
+        a {
+            &:hover {
+                h3, h4, h5 {
+                    color: $color-brand-2 !important;
+                }
+            }
+        }
+        .col-7 {
+            a {
+                &:hover {
+                    color: $color-brand-1 !important;
+                }
+            }
+        }
+    }
+    &.card-list-posts-small {
+        .card-image {
+            max-width: 170px;
+            min-width: 170px;
+        }
+    }
+}
+.card-pricing {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+    padding: 25px;
+    position: relative;
+    background-position: bottom right;
+    &:hover {
+        border-color: $color-gray-700 !important;
+        background: url(../imgs/page/about/shadow-1.svg) no-repeat bottom right;
+    }
+    .lbl-danger {
+        border-radius: 16px;
+        padding: 5px 15px;
+        background-color: $color-danger;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+    .lbl-success {
+        border-radius: 16px;
+        padding: 5px 15px;
+        background-color: $color-success;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+    .card-pricing-top {
+        padding-bottom: 30px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        margin-bottom: 30px;
+    }
+}
+.card-testimonials {
+    position: relative;
+    background: url(../imgs/page/about/quote.svg) no-repeat bottom right 15px;
+    padding: 30px 24px 50px 24px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+}

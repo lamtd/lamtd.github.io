@@ -1,0 +1,167 @@
+.banner-1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    img {
+        border-radius: 16px;
+    }
+}
+.banner-2 {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    z-index: 2;
+    img {
+        border-radius: 16px;
+    }
+}
+.banner-img {
+    &.no-bg {
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+.banner-home3 {
+    padding-bottom: 100px;
+    position: relative;
+    .container {
+        z-index: 2;
+        position: relative;
+    }
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: url(../imgs/page/homepage3/shadow-1.svg) no-repeat bottom right;
+        z-index: 1;
+    }
+}
+.banner-home4 {
+    padding-bottom: 85px;
+}
+.box-socials {
+    display: inline-block;
+    margin-top: 0px;
+    a {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.2s;
+        span {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            &.fb {
+                background-image: url(../imgs/page/homepage3/fb.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &.inst {
+                background-image: url(../imgs/page/homepage3/inst.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &.snap {
+                background-image: url(../imgs/page/homepage3/snap.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &.tw {
+                background-image: url(../imgs/page/homepage3/tw.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        &:hover {
+            background: $background-linear;
+            transition: all 0.2s;
+        }
+    }
+}
+.footer {
+    .box-socials a {
+        border-radius: 0px;
+    }
+}
+.box-banner-4 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    .banner-image {
+        max-width: 211px;
+        min-width: 211px;
+        margin-right: 35px;
+        img {
+            border-radius: 50%;
+            width: 100%;
+            box-shadow: $box-shadow-1;
+            border: 1px solid $color-brand-1;
+            &:hover {
+                box-shadow: $box-shadow-7;
+            }
+        }
+    }
+    .banner-info {
+        width: 100%;
+    }
+    .box-socials {
+        a {
+            height: 32px;
+            width: 32px;
+            span {
+                height: 32px;
+                width: 32px;
+                &.fb {
+                    background-size: auto 14px;
+                }
+                &.inst {
+                    background-size: auto 14px;
+                }
+                &.snap {
+                    background-size: auto 14px;
+                }
+                &.tw {
+                    background-size: auto 14px;
+                }
+            }
+            &:hover {
+                background: $background-linear;
+            }
+        }
+    }
+}
+.calendar-icon {
+    background: url(../imgs/template/icons/calendar.svg) no-repeat left center;
+    display: inline-block;
+    padding-left: 23px;
+    padding-top: 2px;
+}
+.link-brand-1 {
+    color: $color-brand-1;
+    &:hover {
+        color: $color-brand-3;
+    }
+}
+.list-logos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .item-logo {
+        width: 20%;
+    }
+}
+.box-banner-4 {
+    display: flex;
+    width: 100%;
+}

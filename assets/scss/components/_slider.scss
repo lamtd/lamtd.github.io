@@ -1,0 +1,184 @@
+.box-swiper {
+    position: relative;
+    width: 100%;
+
+    .swiper-container {
+        position: relative;
+        height: 100%;
+
+        .item-logo {
+            border: 1px solid $color-gray-500;
+            padding: 39px 0px 36px 0px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: $box-shadow-2;
+
+            img {
+                max-width: 100%;
+            }
+
+            &:hover {
+                border: 1px solid $color-gray-800;
+                box-shadow: $box-shadow-3;
+            }
+        }
+    }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: "";
+}
+
+.swiper-button-next {
+    background: url(../imgs/slider/swiper/next.svg) no-repeat 0px 0px;
+
+    &:hover {
+        background: url(../imgs/slider/swiper/next-active.svg) no-repeat 0px 0px;
+    }
+}
+
+.swiper-button-prev {
+    background: url(../imgs/slider/swiper/prev.svg) no-repeat 0px 0px;
+
+    &:hover {
+        background: url(../imgs/slider/swiper/prev-active.svg) no-repeat 0px 0px;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    margin-top: -16px;
+}
+
+.swiper-button-next {
+    right: -50px;
+}
+
+.swiper-button-prev {
+    left: -50px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+}
+
+.swiper-pagination {
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    margin: 10px;
+}
+
+/*Style of the location of the div that wraps the custom pager*/
+.swiper-pagination-custom {
+    bottom: 40px;
+    padding-left: 70px;
+}
+
+.swiper-pagination-customs {
+    background: url(../imgs/slider/swiper/dot.svg) no-repeat 0px 0px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/*Customize the style representation when pager is activated*/
+.swiper-pagination-customs-active,
+.swiper-pagination-customs:hover {
+    background: url(../imgs/slider/swiper/dot-active.svg) no-repeat 0px 0px;
+    width: 12px;
+    height: 12px;
+    margin-bottom: -1px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.box-button-slider {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.box-buttons-slider {
+    min-height: 40px;
+    margin-bottom: 15px;
+}
+
+.swiper-button-prev-style-1,
+.swiper-button-next-style-1 {
+    height: 32px;
+    width: 32px;
+    top: 50%;
+    transition: all 0.2s;
+}
+
+.swiper-button-next-style-1 {
+    left: 40px;
+    transition: all 0.2s;
+
+    &:hover {
+        background: url(../imgs/slider/swiper/next-active.svg) no-repeat 0px 0px;
+        transition: all 0.2s;
+    }
+}
+
+.swiper-button-prev-style-1 {
+    left: 0px;
+    transition: all 0.2s;
+
+    &:hover {
+        background: url(../imgs/slider/swiper/prev-active.svg) no-repeat 0px 0px;
+        transition: all 0.2s;
+    }
+}
+
+.swiper-buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: -60px;
+
+    .swiper-button-prev-style-3 {
+        left: unset;
+        right: unset;
+        top: unset;
+        bottom: unset;
+        margin-left: -40px;
+    }
+
+    .swiper-button-next-style-3 {
+        left: unset;
+        right: unset;
+        top: unset;
+        bottom: unset;
+        position: relative;
+        display: block;
+        margin-right: -40px;
+    }
+}
+.swiper-group-2 {
+    .swiper-pagination {
+        text-align: center;
+        .swiper-pagination-bullet {
+            background-color: $color-gray-300;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: $color-brand-2;
+        }
+    }
+}
+

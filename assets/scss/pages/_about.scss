@@ -1,0 +1,78 @@
+.box-features {
+    padding: 70px 100px 20px 100px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    z-index: 2;
+}
+.item-icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    &.icon-motion {
+        background: url(../imgs/page/about/motion.svg) no-repeat center;
+    }
+    &.icon-ui {
+        background: url(../imgs/page/about/ui.svg) no-repeat center;
+    }
+    &.icon-branding {
+        background: url(../imgs/page/about/branding.svg) no-repeat center;
+    }
+    &.icon-product {
+        background: url(../imgs/page/about/product.svg) no-repeat center;
+    }
+    &.icon-key {
+        background: url(../imgs/page/about/key.svg) no-repeat center;
+    }
+    &.icon-social {
+        background: url(../imgs/page/about/social.svg) no-repeat center;
+    }
+}
+.list-checked {
+    padding: 0px 0px 0px 20px;
+    li {
+        display: inline-block;
+        padding: 3px 0px 3px 25px;
+        margin: 0px 0px 15px 0px;
+        background: url(../imgs/page/about/checked.svg) no-repeat left center;
+    }
+}
+.accordion-button {
+    border: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.accordion-collapse {
+    border-width: 0 0px;
+    padding-right: 70px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
+.accordion-button::after {
+    background-image: url(../imgs/page/about/open.svg);
+    height: 54px;
+    width: 54px;
+    background-size: auto;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../imgs/page/about/close.svg);
+    height: 54px;
+    width: 54px;
+    background-size: auto;
+}
+.accordion-item {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    &:last-child {
+        border-bottom: 0px;
+    }
+}
+.accordion-body {
+    padding: 20px 0px 40px 0px;
+}
